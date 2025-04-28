@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: 2025-04-28T03:33:41Z
+  creationTimestamp: 2025-04-28T03:50:04Z
   generation: 1
   labels:
-    app: myd
+    app: myd1
   managedFields:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
@@ -46,18 +46,18 @@ metadata:
             f:terminationGracePeriodSeconds: {}
     manager: kubectl
     operation: Update
-    time: 2025-04-28T03:33:41Z
-  name: myd
+    time: 2025-04-28T03:50:04Z
+  name: myd1
   namespace: default
-  resourceVersion: "72334"
-  uid: 4e29e19b-798c-44c7-aebc-1616464c2c2e
+  resourceVersion: "73172"
+  uid: 671d82e4-faff-479a-b93c-758aa979e1d3
 spec:
   progressDeadlineSeconds: 600
-  replicas: 1
+  replicas: 4
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: myd
+      app: myd1
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -67,7 +67,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: myd
+        app: myd1
     spec:
       containers:
       - image: vimal13/apache-webserver-php
