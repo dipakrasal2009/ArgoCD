@@ -10,7 +10,7 @@ spec:
     # include: 'deployment.yml,nginx-deployment.yml'
     repoURL: https://github.com/dipakrasal2009/ArgoCD.git
     targetRevision: HEAD
-    path: menifest
+    path: prod
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
